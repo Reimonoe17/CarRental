@@ -22,20 +22,22 @@ Partial Class CarRentalForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.TextBox10 = New System.Windows.Forms.TextBox()
-        Me.TextBox11 = New System.Windows.Forms.TextBox()
-        Me.TextBox12 = New System.Windows.Forms.TextBox()
-        Me.TextBox13 = New System.Windows.Forms.TextBox()
+        Me.CustomerNameTextBox = New System.Windows.Forms.TextBox()
+        Me.AddressTextBox = New System.Windows.Forms.TextBox()
+        Me.CityTextBox = New System.Windows.Forms.TextBox()
+        Me.StateTextBox = New System.Windows.Forms.TextBox()
+        Me.NumDayTextBox = New System.Windows.Forms.TextBox()
+        Me.EndOdoTextBox = New System.Windows.Forms.TextBox()
+        Me.BegOdoTextBox = New System.Windows.Forms.TextBox()
+        Me.ZipTextBox = New System.Windows.Forms.TextBox()
+        Me.YouOweTextBox = New System.Windows.Forms.TextBox()
+        Me.DiscountTextBox = New System.Windows.Forms.TextBox()
+        Me.DayChargeTextBox = New System.Windows.Forms.TextBox()
+        Me.MileChargeTextBox = New System.Windows.Forms.TextBox()
+        Me.DrivenTextBox = New System.Windows.Forms.TextBox()
         Me.MilesOrKilometerGroupBox = New System.Windows.Forms.GroupBox()
+        Me.KilometerRadioButton = New System.Windows.Forms.RadioButton()
+        Me.MilesRadioButton = New System.Windows.Forms.RadioButton()
         Me.DiscountGroupBox = New System.Windows.Forms.GroupBox()
         Me.CalculateButton = New System.Windows.Forms.Button()
         Me.ClearButton = New System.Windows.Forms.Button()
@@ -54,104 +56,103 @@ Partial Class CarRentalForm
         Me.DayChargeLabel = New System.Windows.Forms.Label()
         Me.MileageChargeLabel = New System.Windows.Forms.Label()
         Me.DistanceDrivenInMilesLabel = New System.Windows.Forms.Label()
-        Me.MilesRadioButton = New System.Windows.Forms.RadioButton()
-        Me.KilometerRadioButton = New System.Windows.Forms.RadioButton()
-        Me.AAARadioButton = New System.Windows.Forms.RadioButton()
-        Me.SeniorRadioButton = New System.Windows.Forms.RadioButton()
+        Me.AAACheckBox = New System.Windows.Forms.CheckBox()
+        Me.SeniorCheckBox = New System.Windows.Forms.CheckBox()
+        Me.TestButton = New System.Windows.Forms.Button()
         Me.MilesOrKilometerGroupBox.SuspendLayout()
         Me.DiscountGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TextBox1
+        'CustomerNameTextBox
         '
-        Me.TextBox1.Location = New System.Drawing.Point(235, 12)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(160, 26)
-        Me.TextBox1.TabIndex = 0
+        Me.CustomerNameTextBox.Location = New System.Drawing.Point(235, 12)
+        Me.CustomerNameTextBox.Name = "CustomerNameTextBox"
+        Me.CustomerNameTextBox.Size = New System.Drawing.Size(160, 26)
+        Me.CustomerNameTextBox.TabIndex = 0
         '
-        'TextBox2
+        'AddressTextBox
         '
-        Me.TextBox2.Location = New System.Drawing.Point(235, 44)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(160, 26)
-        Me.TextBox2.TabIndex = 1
+        Me.AddressTextBox.Location = New System.Drawing.Point(235, 44)
+        Me.AddressTextBox.Name = "AddressTextBox"
+        Me.AddressTextBox.Size = New System.Drawing.Size(160, 26)
+        Me.AddressTextBox.TabIndex = 1
         '
-        'TextBox3
+        'CityTextBox
         '
-        Me.TextBox3.Location = New System.Drawing.Point(235, 76)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(160, 26)
-        Me.TextBox3.TabIndex = 2
+        Me.CityTextBox.Location = New System.Drawing.Point(235, 76)
+        Me.CityTextBox.Name = "CityTextBox"
+        Me.CityTextBox.Size = New System.Drawing.Size(160, 26)
+        Me.CityTextBox.TabIndex = 2
         '
-        'TextBox4
+        'StateTextBox
         '
-        Me.TextBox4.Location = New System.Drawing.Point(235, 108)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(160, 26)
-        Me.TextBox4.TabIndex = 3
+        Me.StateTextBox.Location = New System.Drawing.Point(235, 108)
+        Me.StateTextBox.Name = "StateTextBox"
+        Me.StateTextBox.Size = New System.Drawing.Size(160, 26)
+        Me.StateTextBox.TabIndex = 3
         '
-        'TextBox5
+        'NumDayTextBox
         '
-        Me.TextBox5.Location = New System.Drawing.Point(235, 236)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(160, 26)
-        Me.TextBox5.TabIndex = 7
+        Me.NumDayTextBox.Location = New System.Drawing.Point(235, 236)
+        Me.NumDayTextBox.Name = "NumDayTextBox"
+        Me.NumDayTextBox.Size = New System.Drawing.Size(160, 26)
+        Me.NumDayTextBox.TabIndex = 7
         '
-        'TextBox6
+        'EndOdoTextBox
         '
-        Me.TextBox6.Location = New System.Drawing.Point(235, 204)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(160, 26)
-        Me.TextBox6.TabIndex = 6
+        Me.EndOdoTextBox.Location = New System.Drawing.Point(235, 204)
+        Me.EndOdoTextBox.Name = "EndOdoTextBox"
+        Me.EndOdoTextBox.Size = New System.Drawing.Size(160, 26)
+        Me.EndOdoTextBox.TabIndex = 6
         '
-        'TextBox7
+        'BegOdoTextBox
         '
-        Me.TextBox7.Location = New System.Drawing.Point(235, 172)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(160, 26)
-        Me.TextBox7.TabIndex = 5
+        Me.BegOdoTextBox.Location = New System.Drawing.Point(235, 172)
+        Me.BegOdoTextBox.Name = "BegOdoTextBox"
+        Me.BegOdoTextBox.Size = New System.Drawing.Size(160, 26)
+        Me.BegOdoTextBox.TabIndex = 5
         '
-        'TextBox8
+        'ZipTextBox
         '
-        Me.TextBox8.Location = New System.Drawing.Point(235, 140)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(160, 26)
-        Me.TextBox8.TabIndex = 4
+        Me.ZipTextBox.Location = New System.Drawing.Point(235, 140)
+        Me.ZipTextBox.Name = "ZipTextBox"
+        Me.ZipTextBox.Size = New System.Drawing.Size(160, 26)
+        Me.ZipTextBox.TabIndex = 4
         '
-        'TextBox9
+        'YouOweTextBox
         '
-        Me.TextBox9.Location = New System.Drawing.Point(623, 140)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.Size = New System.Drawing.Size(132, 26)
-        Me.TextBox9.TabIndex = 12
+        Me.YouOweTextBox.Location = New System.Drawing.Point(623, 140)
+        Me.YouOweTextBox.Name = "YouOweTextBox"
+        Me.YouOweTextBox.Size = New System.Drawing.Size(132, 26)
+        Me.YouOweTextBox.TabIndex = 12
         '
-        'TextBox10
+        'DiscountTextBox
         '
-        Me.TextBox10.Location = New System.Drawing.Point(623, 108)
-        Me.TextBox10.Name = "TextBox10"
-        Me.TextBox10.Size = New System.Drawing.Size(132, 26)
-        Me.TextBox10.TabIndex = 11
+        Me.DiscountTextBox.Location = New System.Drawing.Point(623, 108)
+        Me.DiscountTextBox.Name = "DiscountTextBox"
+        Me.DiscountTextBox.Size = New System.Drawing.Size(132, 26)
+        Me.DiscountTextBox.TabIndex = 11
         '
-        'TextBox11
+        'DayChargeTextBox
         '
-        Me.TextBox11.Location = New System.Drawing.Point(623, 76)
-        Me.TextBox11.Name = "TextBox11"
-        Me.TextBox11.Size = New System.Drawing.Size(132, 26)
-        Me.TextBox11.TabIndex = 10
+        Me.DayChargeTextBox.Location = New System.Drawing.Point(623, 76)
+        Me.DayChargeTextBox.Name = "DayChargeTextBox"
+        Me.DayChargeTextBox.Size = New System.Drawing.Size(132, 26)
+        Me.DayChargeTextBox.TabIndex = 10
         '
-        'TextBox12
+        'MileChargeTextBox
         '
-        Me.TextBox12.Location = New System.Drawing.Point(623, 44)
-        Me.TextBox12.Name = "TextBox12"
-        Me.TextBox12.Size = New System.Drawing.Size(132, 26)
-        Me.TextBox12.TabIndex = 9
+        Me.MileChargeTextBox.Location = New System.Drawing.Point(623, 44)
+        Me.MileChargeTextBox.Name = "MileChargeTextBox"
+        Me.MileChargeTextBox.Size = New System.Drawing.Size(132, 26)
+        Me.MileChargeTextBox.TabIndex = 9
         '
-        'TextBox13
+        'DrivenTextBox
         '
-        Me.TextBox13.Location = New System.Drawing.Point(623, 12)
-        Me.TextBox13.Name = "TextBox13"
-        Me.TextBox13.Size = New System.Drawing.Size(132, 26)
-        Me.TextBox13.TabIndex = 8
+        Me.DrivenTextBox.Location = New System.Drawing.Point(623, 12)
+        Me.DrivenTextBox.Name = "DrivenTextBox"
+        Me.DrivenTextBox.Size = New System.Drawing.Size(132, 26)
+        Me.DrivenTextBox.TabIndex = 8
         '
         'MilesOrKilometerGroupBox
         '
@@ -164,10 +165,32 @@ Partial Class CarRentalForm
         Me.MilesOrKilometerGroupBox.TabStop = False
         Me.MilesOrKilometerGroupBox.Text = "Is the Odometer in Miles or Kilometers"
         '
+        'KilometerRadioButton
+        '
+        Me.KilometerRadioButton.AutoSize = True
+        Me.KilometerRadioButton.Location = New System.Drawing.Point(22, 55)
+        Me.KilometerRadioButton.Name = "KilometerRadioButton"
+        Me.KilometerRadioButton.Size = New System.Drawing.Size(108, 24)
+        Me.KilometerRadioButton.TabIndex = 1
+        Me.KilometerRadioButton.TabStop = True
+        Me.KilometerRadioButton.Text = "Kilometers"
+        Me.KilometerRadioButton.UseVisualStyleBackColor = True
+        '
+        'MilesRadioButton
+        '
+        Me.MilesRadioButton.AutoSize = True
+        Me.MilesRadioButton.Location = New System.Drawing.Point(22, 25)
+        Me.MilesRadioButton.Name = "MilesRadioButton"
+        Me.MilesRadioButton.Size = New System.Drawing.Size(70, 24)
+        Me.MilesRadioButton.TabIndex = 0
+        Me.MilesRadioButton.TabStop = True
+        Me.MilesRadioButton.Text = "Miles"
+        Me.MilesRadioButton.UseVisualStyleBackColor = True
+        '
         'DiscountGroupBox
         '
-        Me.DiscountGroupBox.Controls.Add(Me.SeniorRadioButton)
-        Me.DiscountGroupBox.Controls.Add(Me.AAARadioButton)
+        Me.DiscountGroupBox.Controls.Add(Me.SeniorCheckBox)
+        Me.DiscountGroupBox.Controls.Add(Me.AAACheckBox)
         Me.DiscountGroupBox.Location = New System.Drawing.Point(390, 286)
         Me.DiscountGroupBox.Name = "DiscountGroupBox"
         Me.DiscountGroupBox.Size = New System.Drawing.Size(398, 91)
@@ -328,55 +351,41 @@ Partial Class CarRentalForm
         Me.DistanceDrivenInMilesLabel.TabIndex = 27
         Me.DistanceDrivenInMilesLabel.Text = "Distance Driven in Miles"
         '
-        'MilesRadioButton
+        'AAACheckBox
         '
-        Me.MilesRadioButton.AutoSize = True
-        Me.MilesRadioButton.Location = New System.Drawing.Point(22, 25)
-        Me.MilesRadioButton.Name = "MilesRadioButton"
-        Me.MilesRadioButton.Size = New System.Drawing.Size(70, 24)
-        Me.MilesRadioButton.TabIndex = 0
-        Me.MilesRadioButton.TabStop = True
-        Me.MilesRadioButton.Text = "Miles"
-        Me.MilesRadioButton.UseVisualStyleBackColor = True
+        Me.AAACheckBox.AutoSize = True
+        Me.AAACheckBox.Location = New System.Drawing.Point(36, 26)
+        Me.AAACheckBox.Name = "AAACheckBox"
+        Me.AAACheckBox.Size = New System.Drawing.Size(197, 24)
+        Me.AAACheckBox.TabIndex = 32
+        Me.AAACheckBox.Text = "AAA Member Discount"
+        Me.AAACheckBox.UseVisualStyleBackColor = True
         '
-        'KilometerRadioButton
+        'SeniorCheckBox
         '
-        Me.KilometerRadioButton.AutoSize = True
-        Me.KilometerRadioButton.Location = New System.Drawing.Point(22, 55)
-        Me.KilometerRadioButton.Name = "KilometerRadioButton"
-        Me.KilometerRadioButton.Size = New System.Drawing.Size(108, 24)
-        Me.KilometerRadioButton.TabIndex = 1
-        Me.KilometerRadioButton.TabStop = True
-        Me.KilometerRadioButton.Text = "Kilometers"
-        Me.KilometerRadioButton.UseVisualStyleBackColor = True
+        Me.SeniorCheckBox.AutoSize = True
+        Me.SeniorCheckBox.Location = New System.Drawing.Point(36, 55)
+        Me.SeniorCheckBox.Name = "SeniorCheckBox"
+        Me.SeniorCheckBox.Size = New System.Drawing.Size(200, 24)
+        Me.SeniorCheckBox.TabIndex = 33
+        Me.SeniorCheckBox.Text = "Senior Citizen Discount"
+        Me.SeniorCheckBox.UseVisualStyleBackColor = True
         '
-        'AAARadioButton
+        'TestButton
         '
-        Me.AAARadioButton.AutoSize = True
-        Me.AAARadioButton.Location = New System.Drawing.Point(34, 26)
-        Me.AAARadioButton.Name = "AAARadioButton"
-        Me.AAARadioButton.Size = New System.Drawing.Size(196, 24)
-        Me.AAARadioButton.TabIndex = 0
-        Me.AAARadioButton.TabStop = True
-        Me.AAARadioButton.Text = "AAA Member Discount"
-        Me.AAARadioButton.UseVisualStyleBackColor = True
-        '
-        'SeniorRadioButton
-        '
-        Me.SeniorRadioButton.AutoSize = True
-        Me.SeniorRadioButton.Location = New System.Drawing.Point(34, 55)
-        Me.SeniorRadioButton.Name = "SeniorRadioButton"
-        Me.SeniorRadioButton.Size = New System.Drawing.Size(199, 24)
-        Me.SeniorRadioButton.TabIndex = 1
-        Me.SeniorRadioButton.TabStop = True
-        Me.SeniorRadioButton.Text = "Senior Citizen Discount"
-        Me.SeniorRadioButton.UseVisualStyleBackColor = True
+        Me.TestButton.Location = New System.Drawing.Point(524, 207)
+        Me.TestButton.Name = "TestButton"
+        Me.TestButton.Size = New System.Drawing.Size(94, 44)
+        Me.TestButton.TabIndex = 32
+        Me.TestButton.Text = "Test"
+        Me.TestButton.UseVisualStyleBackColor = True
         '
         'CarRentalForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.TestButton)
         Me.Controls.Add(Me.YouOweLabel)
         Me.Controls.Add(Me.MinusDiscountLabel)
         Me.Controls.Add(Me.DayChargeLabel)
@@ -396,21 +405,21 @@ Partial Class CarRentalForm
         Me.Controls.Add(Me.CalculateButton)
         Me.Controls.Add(Me.DiscountGroupBox)
         Me.Controls.Add(Me.MilesOrKilometerGroupBox)
-        Me.Controls.Add(Me.TextBox9)
-        Me.Controls.Add(Me.TextBox10)
-        Me.Controls.Add(Me.TextBox11)
-        Me.Controls.Add(Me.TextBox12)
-        Me.Controls.Add(Me.TextBox13)
-        Me.Controls.Add(Me.TextBox5)
-        Me.Controls.Add(Me.TextBox6)
-        Me.Controls.Add(Me.TextBox7)
-        Me.Controls.Add(Me.TextBox8)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.YouOweTextBox)
+        Me.Controls.Add(Me.DiscountTextBox)
+        Me.Controls.Add(Me.DayChargeTextBox)
+        Me.Controls.Add(Me.MileChargeTextBox)
+        Me.Controls.Add(Me.DrivenTextBox)
+        Me.Controls.Add(Me.NumDayTextBox)
+        Me.Controls.Add(Me.EndOdoTextBox)
+        Me.Controls.Add(Me.BegOdoTextBox)
+        Me.Controls.Add(Me.ZipTextBox)
+        Me.Controls.Add(Me.StateTextBox)
+        Me.Controls.Add(Me.CityTextBox)
+        Me.Controls.Add(Me.AddressTextBox)
+        Me.Controls.Add(Me.CustomerNameTextBox)
         Me.Name = "CarRentalForm"
-        Me.Text = "Form1"
+        Me.Text = "Acme Care Rental Service"
         Me.MilesOrKilometerGroupBox.ResumeLayout(False)
         Me.MilesOrKilometerGroupBox.PerformLayout()
         Me.DiscountGroupBox.ResumeLayout(False)
@@ -420,19 +429,19 @@ Partial Class CarRentalForm
 
     End Sub
 
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents TextBox10 As TextBox
-    Friend WithEvents TextBox11 As TextBox
-    Friend WithEvents TextBox12 As TextBox
-    Friend WithEvents TextBox13 As TextBox
+    Friend WithEvents CustomerNameTextBox As TextBox
+    Friend WithEvents AddressTextBox As TextBox
+    Friend WithEvents CityTextBox As TextBox
+    Friend WithEvents StateTextBox As TextBox
+    Friend WithEvents NumDayTextBox As TextBox
+    Friend WithEvents EndOdoTextBox As TextBox
+    Friend WithEvents BegOdoTextBox As TextBox
+    Friend WithEvents ZipTextBox As TextBox
+    Friend WithEvents YouOweTextBox As TextBox
+    Friend WithEvents DiscountTextBox As TextBox
+    Friend WithEvents DayChargeTextBox As TextBox
+    Friend WithEvents MileChargeTextBox As TextBox
+    Friend WithEvents DrivenTextBox As TextBox
     Friend WithEvents MilesOrKilometerGroupBox As GroupBox
     Friend WithEvents DiscountGroupBox As GroupBox
     Friend WithEvents CalculateButton As Button
@@ -454,6 +463,7 @@ Partial Class CarRentalForm
     Friend WithEvents DistanceDrivenInMilesLabel As Label
     Friend WithEvents KilometerRadioButton As RadioButton
     Friend WithEvents MilesRadioButton As RadioButton
-    Friend WithEvents SeniorRadioButton As RadioButton
-    Friend WithEvents AAARadioButton As RadioButton
+    Friend WithEvents SeniorCheckBox As CheckBox
+    Friend WithEvents AAACheckBox As CheckBox
+    Friend WithEvents TestButton As Button
 End Class
