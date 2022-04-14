@@ -39,6 +39,8 @@ Partial Class CarRentalForm
         Me.KilometerRadioButton = New System.Windows.Forms.RadioButton()
         Me.MilesRadioButton = New System.Windows.Forms.RadioButton()
         Me.DiscountGroupBox = New System.Windows.Forms.GroupBox()
+        Me.SeniorCheckBox = New System.Windows.Forms.CheckBox()
+        Me.AAACheckBox = New System.Windows.Forms.CheckBox()
         Me.CalculateButton = New System.Windows.Forms.Button()
         Me.ClearButton = New System.Windows.Forms.Button()
         Me.SummayButton = New System.Windows.Forms.Button()
@@ -56,8 +58,6 @@ Partial Class CarRentalForm
         Me.DayChargeLabel = New System.Windows.Forms.Label()
         Me.MileageChargeLabel = New System.Windows.Forms.Label()
         Me.DistanceDrivenInMilesLabel = New System.Windows.Forms.Label()
-        Me.AAACheckBox = New System.Windows.Forms.CheckBox()
-        Me.SeniorCheckBox = New System.Windows.Forms.CheckBox()
         Me.TestButton = New System.Windows.Forms.Button()
         Me.MilesOrKilometerGroupBox.SuspendLayout()
         Me.DiscountGroupBox.SuspendLayout()
@@ -179,6 +179,7 @@ Partial Class CarRentalForm
         'MilesRadioButton
         '
         Me.MilesRadioButton.AutoSize = True
+        Me.MilesRadioButton.Checked = True
         Me.MilesRadioButton.Location = New System.Drawing.Point(22, 25)
         Me.MilesRadioButton.Name = "MilesRadioButton"
         Me.MilesRadioButton.Size = New System.Drawing.Size(70, 24)
@@ -197,6 +198,26 @@ Partial Class CarRentalForm
         Me.DiscountGroupBox.TabIndex = 14
         Me.DiscountGroupBox.TabStop = False
         Me.DiscountGroupBox.Text = "Enter any Discounts"
+        '
+        'SeniorCheckBox
+        '
+        Me.SeniorCheckBox.AutoSize = True
+        Me.SeniorCheckBox.Location = New System.Drawing.Point(36, 55)
+        Me.SeniorCheckBox.Name = "SeniorCheckBox"
+        Me.SeniorCheckBox.Size = New System.Drawing.Size(200, 24)
+        Me.SeniorCheckBox.TabIndex = 33
+        Me.SeniorCheckBox.Text = "Senior Citizen Discount"
+        Me.SeniorCheckBox.UseVisualStyleBackColor = True
+        '
+        'AAACheckBox
+        '
+        Me.AAACheckBox.AutoSize = True
+        Me.AAACheckBox.Location = New System.Drawing.Point(36, 26)
+        Me.AAACheckBox.Name = "AAACheckBox"
+        Me.AAACheckBox.Size = New System.Drawing.Size(197, 24)
+        Me.AAACheckBox.TabIndex = 32
+        Me.AAACheckBox.Text = "AAA Member Discount"
+        Me.AAACheckBox.UseVisualStyleBackColor = True
         '
         'CalculateButton
         '
@@ -350,26 +371,6 @@ Partial Class CarRentalForm
         Me.DistanceDrivenInMilesLabel.Size = New System.Drawing.Size(177, 20)
         Me.DistanceDrivenInMilesLabel.TabIndex = 27
         Me.DistanceDrivenInMilesLabel.Text = "Distance Driven in Miles"
-        '
-        'AAACheckBox
-        '
-        Me.AAACheckBox.AutoSize = True
-        Me.AAACheckBox.Location = New System.Drawing.Point(36, 26)
-        Me.AAACheckBox.Name = "AAACheckBox"
-        Me.AAACheckBox.Size = New System.Drawing.Size(197, 24)
-        Me.AAACheckBox.TabIndex = 32
-        Me.AAACheckBox.Text = "AAA Member Discount"
-        Me.AAACheckBox.UseVisualStyleBackColor = True
-        '
-        'SeniorCheckBox
-        '
-        Me.SeniorCheckBox.AutoSize = True
-        Me.SeniorCheckBox.Location = New System.Drawing.Point(36, 55)
-        Me.SeniorCheckBox.Name = "SeniorCheckBox"
-        Me.SeniorCheckBox.Size = New System.Drawing.Size(200, 24)
-        Me.SeniorCheckBox.TabIndex = 33
-        Me.SeniorCheckBox.Text = "Senior Citizen Discount"
-        Me.SeniorCheckBox.UseVisualStyleBackColor = True
         '
         'TestButton
         '
