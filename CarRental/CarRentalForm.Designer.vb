@@ -239,6 +239,7 @@ Partial Class CarRentalForm
         '
         'SummayButton
         '
+        Me.SummayButton.Enabled = False
         Me.SummayButton.Location = New System.Drawing.Point(390, 396)
         Me.SummayButton.Name = "SummayButton"
         Me.SummayButton.Size = New System.Drawing.Size(128, 42)

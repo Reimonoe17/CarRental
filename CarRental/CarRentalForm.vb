@@ -116,6 +116,7 @@ Public Class CarRentalForm
         Dim distance As Decimal
         Dim discount As Decimal = 1
         Dim sum As Decimal
+        Dim finalCharge As Decimal
 
         DayChargeTextBox.Text = (CDec(dailyCharge * NumDayTextBox.Text)).ToString("C")
 
@@ -149,9 +150,25 @@ Public Class CarRentalForm
         sum = (CDec(MileChargeTextBox.Text) + CDec(DayChargeTextBox.Text))
         DiscountTextBox.Text = ((discount * sum) - sum).ToString("C")
 
+        finalCharge = (sum + (CDec(DiscountTextBox.Text)))
         YouOweTextBox.Text = (sum + (CDec(DiscountTextBox.Text))).ToString("C")
 
+        Totals(1, distance, finalCharge)
     End Sub
+
+    Function Totals(Optional cust As Integer = 0, Optional dist As Decimal = 0, Optional prof As Decimal = 0)
+        Dim summaryReport As String
+        Static customers As Integer
+        Static distance, profit As Decimal
+
+        customers += cust
+        distance += CDec(dist)
+        profit += CDec(prof)
+
+        summaryReport = ("Total Customers:" & customers.ToString.PadLeft(30) & vbNewLine & "Total Miles Driven:" & distance.ToString.PadLeft(30) & "mi" & vbNewLine & "Total Charges:" & profit.ToString("C").PadLeft(40) & vbNewLine)
+
+        Return summaryReport
+    End Function
 
     Private Sub TestButton_Click(sender As Object, e As EventArgs) Handles TestButton.Click
         CustomerNameTextBox.Text = "Harry Potter"
@@ -167,8 +184,45 @@ Public Class CarRentalForm
     Private Sub CalculateButton_Click(sender As Object, e As EventArgs) Handles CalculateButton.Click
         If ValidationTest() = True Then
             Calculation()
+            SummayButton.Enabled = True
         End If
     End Sub
+    Sub Reset()
+        CustomerNameTextBox.Text = ""
+        AddressTextBox.Text = ""
+        CityTextBox.Text = ""
+        StateTextBox.Text = ""
+        ZipTextBox.Text = ""
+        BegOdoTextBox.Text = ""
+        EndOdoTextBox.Text = ""
+        NumDayTextBox.Text = ""
+        DrivenTextBox.Text = ""
+        MileChargeTextBox.Text = ""
+        DayChargeTextBox.Text = ""
+        DiscountTextBox.Text = ""
+        YouOweTextBox.Text = ""
+        MilesRadioButton.Checked = True
+        AAACheckBox.Checked = False
+        SeniorCheckBox.Checked = False
+    End Sub
+    Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles ClearButton.Click
+        Reset()
+    End Sub
+    Sub Summary()
+        Dim title As String = "Detail Summary"
+        MsgBox(Totals(),, title)
 
+    End Sub
+    Private Sub SummayButton_Click(sender As Object, e As EventArgs) Handles SummayButton.Click
+        Summary()
+        Reset()
+    End Sub
 
+    Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
+        Dim style = MsgBoxStyle.YesNo
+        MsgBox("Are you sure you wish to exit?", style)
+        If MsgBoxResult.Yes Then
+            Me.Close()
+        End If
+    End Sub
 End Class
