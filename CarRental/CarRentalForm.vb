@@ -219,9 +219,13 @@ Public Class CarRentalForm
     End Sub
 
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles ExitButton.Click
-        Dim style = MsgBoxStyle.YesNo
-        MsgBox("Are you sure you wish to exit?", style)
-        If MsgBoxResult.Yes Then
+        Dim msg = "Do you wish to Exit?"
+        Dim title = "Exit Acme Car Rental"
+        Dim style = MsgBoxStyle.YesNo Or MsgBoxStyle.DefaultButton2 Or
+           MsgBoxStyle.Critical
+        Dim response = MsgBox(msg, style, title)
+
+        If response = MsgBoxResult.Yes Then
             Me.Close()
         End If
     End Sub
